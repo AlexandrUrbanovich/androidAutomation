@@ -1,7 +1,6 @@
 package core;
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class DesiredCapabilitiesManager {
@@ -10,10 +9,13 @@ public class DesiredCapabilitiesManager {
     public static DesiredCapabilities getCapabilities(){
         log.info("Set capability");
         DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("deviceName", "Nexus 5X API 24");
+        capabilities.setCapability("udid", "emulator-5554");
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("deviceName", "Android Emulator");
-        capabilities.setCapability(CapabilityType.BROWSER_NAME, "Android");
-        capabilities.setCapability("platfotmVersion", "7.0");
+        capabilities.setCapability("platformVersion", "7.0");
+        capabilities.setCapability("appPackage", "com.android.settings");
+        capabilities.setCapability("appActivity", "com.android.settings.Settings");
 
         return capabilities;
     }
