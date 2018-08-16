@@ -11,6 +11,7 @@ public class DesiredCapabilitiesManager {
         log.info("Set capability");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
+        capabilities.setCapability("deviceName", "Android Emulator");
         capabilities.setCapability(CapabilityType.BROWSER_NAME, "Android");
         capabilities.setCapability("platfotmVersion", "7.0");
 
