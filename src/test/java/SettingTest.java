@@ -16,8 +16,6 @@ public class SettingTest extends SettingsForTests {
     public void settingPageCheckTest() throws MalformedURLException {
         log.info(LogMessage.getLogTest("settingPageCheckTest"));
 
-        appiumServerJava.startServer();
-
         softAssert.assertEquals(settingServices.getWifi(), true, "Wi-Fi not displayed");
         softAssert.assertEquals(settingServices.getDisplay(), true, "Display not displayed");
 

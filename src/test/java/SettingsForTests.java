@@ -1,6 +1,7 @@
 import org.apache.log4j.Logger;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Guice;
 import org.testng.asserts.SoftAssert;
 import services.modules.CustomFrameworkModule;
@@ -12,6 +13,12 @@ public class SettingsForTests {
     public static SoftAssert softAssert;
 
     AppiumServerJava appiumServerJava = new AppiumServerJava();
+
+    @BeforeSuite
+    public void beforeSuite() {
+        log.info("Server RUN!!!");
+        appiumServerJava.startServer();
+    }
 
     @BeforeMethod
     public void beforeMethod() {

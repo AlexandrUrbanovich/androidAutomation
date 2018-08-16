@@ -18,7 +18,6 @@ public class AppiumServerJava {
 
         service = AppiumDriverLocalService.buildService(builder);
         service.start();
-        log.info("Server RUN!!!");
     }
 
     public void stopServer() {
