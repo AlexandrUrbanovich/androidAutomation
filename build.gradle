@@ -19,7 +19,12 @@ dependencies {
     compile group: 'com.google.inject', name: 'guice', version: '4.0'
     // https://mvnrepository.com/artifact/ru.yandex.qatools.htmlelements/htmlelements-all
     compile group: 'ru.yandex.qatools.htmlelements', name: 'htmlelements-all', version: '1.19'
-    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-android-driver
-    compile group: 'org.seleniumhq.selenium', name: 'selenium-android-driver', version: '2.39.0'
+//    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-android-driver
+//    compile group: 'org.seleniumhq.selenium', name: 'selenium-android-driver', version: '2.39.0'
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-remote-driver
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-remote-driver', version: '2.44.0'
+    // https://mvnrepository.com/artifact/io.appium/java-client
+    compile group: 'io.appium', name: 'java-client', version: '4.1.2'
+
 
 }
