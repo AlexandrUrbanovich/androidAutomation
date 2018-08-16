@@ -1,5 +1,4 @@
 import com.google.inject.Inject;
-import core.AndroidDriverCreator;
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 import services.interfaces.ISettingServices;
@@ -17,7 +16,7 @@ public class SettingTest extends SettingsForTests {
     public void settingPageCheckTest() throws MalformedURLException {
         log.info(LogMessage.getLogTest("settingPageCheckTest"));
 
-        AndroidDriverCreator.getDriver();
+        appiumServerJava.startServer();
 
         softAssert.assertEquals(settingServices.getWifi(), true, "Wi-Fi not displayed");
         softAssert.assertEquals(settingServices.getDisplay(), true, "Display not displayed");

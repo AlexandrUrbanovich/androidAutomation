@@ -13,13 +13,13 @@ public class SettingServices extends PageProvider<SettingsPage> implements ISett
 
     @Override
     public boolean getWifi() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getWifi().getName()));
+//        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getWifi().getName()));
         return getPage().getWifi().isDisplayed();
     }
 
     @Override
     public boolean getDisplay() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getDisplay().getName()));
+//        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getDisplay().getName()));
         return getPage().getDisplay().isDisplayed();
     }
 }
