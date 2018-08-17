@@ -26,6 +26,5 @@ public class SettingTest extends SettingsForTests {
         softAssert.assertEquals(settingServices.getDisplay(), true, "Display not displayed");
 
         softAssert.assertAll();
-}
-
+    }
 }
