@@ -18,9 +18,9 @@ public class SettingTest extends SettingsForTests {
     public void settingPageCheckTest() throws MalformedURLException {
         log.info(LogMessage.getLogTest("settingPageCheckTest"));
 
-//        AndroidDriverCreator.getDriver().findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[5]")).click();
+        AndroidDriverCreator.getDriver().findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[5]")).click();
 
-        settingServices.clickWifi();
+//        settingServices.clickWifi();
 
 //        softAssert.assertEquals(settingServices.getWifi(), true, "Wi-Fi not displayed");
 //        softAssert.assertEquals(settingServices.getDisplay(), true, "Display not displayed");
