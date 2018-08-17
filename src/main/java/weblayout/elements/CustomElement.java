@@ -11,4 +11,9 @@ public abstract class CustomElement extends TypifiedElement {
         super(wrappedElement);
     }
 
+    public void click() {
+        log.info("Element [" + this.getName() + "] was clicked");
+        super.getWrappedElement().click();
+    }
+
 }
