@@ -13,7 +13,7 @@ public class AndroidDriverCreator {
 
     public static AndroidDriver getDriver() throws MalformedURLException {
         if(driver == null) {
-            driver = new AndroidDriver<>(new URL("https://127.0.0.1:4723/wd/hub"), DesiredCapabilitiesManager.getCapabilities());
+            driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), DesiredCapabilitiesManager.getCapabilities());
             log.info("Create AndroidDriver if driver null");
         }
         log.info("Using create driver");
