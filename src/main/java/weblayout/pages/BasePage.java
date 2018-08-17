@@ -6,7 +6,11 @@ import ru.yandex.qatools.htmlelements.loader.HtmlElementLoader;
 import java.net.MalformedURLException;
 
 public abstract class BasePage {
-    protected BasePage() throws MalformedURLException {
-        HtmlElementLoader.populatePageObject(this, AndroidDriverCreator.getDriver());
+    protected BasePage() {
+        try {
+            HtmlElementLoader.populatePageObject(this, AndroidDriverCreator.getDriver());
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
     }
 }

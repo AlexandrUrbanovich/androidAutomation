@@ -4,4 +4,5 @@ public interface ISettingServices {
 
     boolean getWifi();
     boolean getDisplay();
+    void clickWifi();
 }
