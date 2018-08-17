@@ -4,9 +4,9 @@ import enums.PageName;
 import org.apache.log4j.Logger;
 import services.interfaces.ISettingServices;
 import tools.LogMessage;
-import weblayout.pages.SettingsPage;
+import weblayout.pages.SettingPage;
 
-public class SettingServices extends PageProvider<SettingsPage> implements ISettingServices {
+public class SettingServices extends PageProvider<SettingPage> implements ISettingServices {
     private static final Logger log = Logger.getLogger(SettingServices.class);
 
     private String pageName = PageName.SETTING_PAGE.getName();
