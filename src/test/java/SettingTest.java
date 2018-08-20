@@ -35,7 +35,7 @@ public class SettingTest extends SettingsForTests {
     }
 
     @Test
-    public void androidWIfiTest() throws MalformedURLException {
+    public void androidWIfiTest() {
         log.info(LogMessage.getLogTest("androidWIfiTest"));
 
         settingServices.clickWifi();
