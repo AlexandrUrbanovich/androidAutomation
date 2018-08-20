@@ -1,6 +1,7 @@
 import com.google.inject.Inject;
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
+import services.interfaces.IAndroidWifiServices;
 import services.interfaces.ISettingServices;
 import tools.LogMessage;
 
@@ -12,15 +13,20 @@ public class SettingTest extends SettingsForTests {
     @Inject
     public ISettingServices settingServices;
 
+    @Inject
+    public IAndroidWifiServices androidWifiServices;
+
     @Test
     public void settingPageCheckTest() throws MalformedURLException {
         log.info(LogMessage.getLogTest("settingPageCheckTest"));
 
         settingServices.clickWifi();
 
-        softAssert.assertEquals(settingServices.getAndroidWifi(), true, "Android Wi-Fi not displayed");
-        softAssert.assertEquals(settingServices.getOnOffSelector(), true, "On Off Selector not displayed");
+        softAssert.assertEquals(androidWifiServices.getAndroidWifi(), true, "Android Wi-Fi not displayed");
+        softAssert.assertEquals(androidWifiServices.getOnOffSelector(), true, "On Off Selector not displayed");
 
         softAssert.assertAll();
     }
+
+
 }

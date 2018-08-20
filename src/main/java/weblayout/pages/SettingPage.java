@@ -16,12 +16,6 @@ public class SettingPage extends BasePage {
     @WithTimeout(time = 20, chronoUnit = ChronoUnit.SECONDS)
     private WebElement display;
 
-    @AndroidFindBy(accessibility = "AndroidWifi,Connected,Wifi signal full.")
-    private WebElement androidWifi;
-
-    @AndroidFindBy(id = "com.android.settings:id/switch_widget")
-    private WebElement onOffSelector;
-
     public WebElement getWifi() {
         return wifi;
     }
@@ -30,11 +24,5 @@ public class SettingPage extends BasePage {
         return display;
     }
 
-    public WebElement getAndroidWifi() {
-        return androidWifi;
-    }
 
-    public WebElement getOnOffSelector() {
-        return onOffSelector;
-    }
 }

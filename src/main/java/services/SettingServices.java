@@ -24,19 +24,6 @@ public class SettingServices extends PageProvider<SettingPage> implements ISetti
     }
 
     @Override
-    public boolean getAndroidWifi() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getAndroidWifi().getTagName()));
-        return getPage().getAndroidWifi().isDisplayed();
-    }
-
-    @Override
-    public boolean getOnOffSelector() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getOnOffSelector().getTagName()));
-        return getPage().getOnOffSelector().isEnabled();
-    }
-
-
-    @Override
     public void clickWifi() {
         log.info("Wifi was clicked");
         getPage().getWifi().click();
