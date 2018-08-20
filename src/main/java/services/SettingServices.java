@@ -29,4 +29,46 @@ public class SettingServices extends PageProvider<SettingPage> implements ISetti
         getPage().getWifi().click();
     }
 
+    @Override
+    public boolean getNotifications() {
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getNotifications().getTagName()));
+        return getPage().getNotifications().isDisplayed();
+    }
+
+    @Override
+    public boolean getSound() {
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getSound().getTagName()));
+        return getPage().getSound().isDisplayed();
+    }
+
+    @Override
+    public boolean getApps() {
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getApps().getTagName()));
+        return getPage().getApps().isDisplayed();
+    }
+
+    @Override
+    public boolean getStorage() {
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getStorage().getTagName()));
+        return getPage().getStorage().isDisplayed();
+    }
+
+    @Override
+    public boolean getBattery() {
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getBattery().getTagName()));
+        return getPage().getBattery().isDisplayed();
+    }
+
+    @Override
+    public boolean getMemory() {
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getMemory().getTagName()));
+        return getPage().getMemory().isDisplayed();
+    }
+
+    @Override
+    public boolean getUsers() {
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getUsers().getTagName()));
+        return getPage().getUsers().isDisplayed();
+    }
+
 }

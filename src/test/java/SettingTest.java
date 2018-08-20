@@ -17,8 +17,26 @@ public class SettingTest extends SettingsForTests {
     public IAndroidWifiServices androidWifiServices;
 
     @Test
-    public void settingPageCheckTest() throws MalformedURLException {
-        log.info(LogMessage.getLogTest("settingPageCheckTest"));
+    public void settingTest() {
+        log.info(LogMessage.getLogTest("settingTest"));
+
+        softAssert.assertEquals(settingServices.getWifi(), true, "Wifi not displayed");
+        softAssert.assertEquals(settingServices.getDisplay(), true, "Display not displayed");
+        softAssert.assertEquals(settingServices.getNotifications(), true, "Notification not displayed");
+        softAssert.assertEquals(settingServices.getSound(), true, "Sound not displayed");
+        softAssert.assertEquals(settingServices.getApps(), true, "Apps not displayed");
+        softAssert.assertEquals(settingServices.getStorage(), true, "Storage not displayed");
+        softAssert.assertEquals(settingServices.getBattery(), true, "Battery not displayed");
+        softAssert.assertEquals(settingServices.getMemory(), true, "Memory not displayed");
+        softAssert.assertEquals(settingServices.getUsers(), true, "Users not displayed");
+
+        softAssert.assertAll();
+
+    }
+
+    @Test
+    public void androidWIfiTest() throws MalformedURLException {
+        log.info(LogMessage.getLogTest("androidWIfiTest"));
 
         settingServices.clickWifi();
 
