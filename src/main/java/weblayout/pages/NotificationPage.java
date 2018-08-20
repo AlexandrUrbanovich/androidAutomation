@@ -28,4 +28,36 @@ public class NotificationPage extends BasePage {
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/android.widget.ListView/android.widget.LinearLayout[3]")
     private WebElement contacts;
+
+    public WebElement getAndroidKeyboard() {
+        return androidKeyboard;
+    }
+
+    public WebElement getApiDemos() {
+        return apiDemos;
+    }
+
+    public WebElement getAppiumSettings() {
+        return appiumSettings;
+    }
+
+    public WebElement getCalculator() {
+        return calculator;
+    }
+
+    public WebElement getCalendar() {
+        return calendar;
+    }
+
+    public WebElement getCamera() {
+        return camera;
+    }
+
+    public WebElement getClock() {
+        return clock;
+    }
+
+    public WebElement getContacts() {
+        return contacts;
+    }
 }
