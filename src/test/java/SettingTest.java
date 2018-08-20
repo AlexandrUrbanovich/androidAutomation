@@ -22,8 +22,8 @@ public class SettingTest extends SettingsForTests {
 
         settingServices.clickWifi();
 
-        softAssert.assertEquals(settingServices.getWifi(), true, "Wi-Fi not displayed");
-        softAssert.assertEquals(settingServices.getDisplay(), true, "Display not displayed");
+//        softAssert.assertEquals(settingServices.getWifi(), true, "Wi-Fi not displayed");
+//        softAssert.assertEquals(settingServices.getDisplay(), true, "Display not displayed");
 
         softAssert.assertAll();
     }
