@@ -3,8 +3,9 @@ package services.interfaces;
 public interface ISettingServices {
 
     boolean getWifi();
-    boolean getDisplay();
     void clickWifi();
+    boolean getDisplay();
+    void clickDisplayed();
     boolean getNotifications();
     boolean getSound();
     boolean getApps();

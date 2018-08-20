@@ -18,15 +18,21 @@ public class SettingServices extends PageProvider<SettingPage> implements ISetti
     }
 
     @Override
+    public void clickWifi() {
+        log.info("Wifi was clicked");
+        getPage().getWifi().click();
+    }
+
+    @Override
     public boolean getDisplay() {
         log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getDisplay().getTagName()));
         return getPage().getDisplay().isDisplayed();
     }
 
     @Override
-    public void clickWifi() {
-        log.info("Wifi was clicked");
-        getPage().getWifi().click();
+    public void clickDisplayed() {
+        log.info("Displayed was clicked");
+        getPage().getDisplay().click();
     }
 
     @Override

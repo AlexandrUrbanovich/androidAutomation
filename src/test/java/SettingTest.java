@@ -1,11 +1,10 @@
 import com.google.inject.Inject;
+import core.AndroidDriverCreator;
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 import services.interfaces.IAndroidWifiServices;
 import services.interfaces.ISettingServices;
 import tools.LogMessage;
-
-import java.net.MalformedURLException;
 
 public class SettingTest extends SettingsForTests {
     private static final Logger log = Logger.getLogger(SettingTest.class);
@@ -35,8 +34,8 @@ public class SettingTest extends SettingsForTests {
     }
 
     @Test
-    public void androidWIfiTest() {
-        log.info(LogMessage.getLogTest("androidWIfiTest"));
+    public void androidWifiTest() {
+        log.info(LogMessage.getLogTest("androidWifiTest"));
 
         settingServices.clickWifi();
 
@@ -44,7 +43,19 @@ public class SettingTest extends SettingsForTests {
         softAssert.assertEquals(androidWifiServices.getOnOffSelector(), true, "On Off Selector not displayed");
 
         softAssert.assertAll();
+
+        AndroidDriverCreator.getDriver().navigate().back();
     }
+
+    @Test
+    public void displayedTest() {
+        log.info(LogMessage.getLogTest("displayedTest"));
+
+        settingServices.clickDisplayed();
+
+
+    }
+
 
 
 }
