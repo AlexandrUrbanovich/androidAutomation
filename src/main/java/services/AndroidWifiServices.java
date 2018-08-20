@@ -9,7 +9,7 @@ import weblayout.pages.AndroidWifiPage;
 public class AndroidWifiServices extends PageProvider<AndroidWifiPage> implements IAndroidWifiServices {
     private static final Logger log = Logger.getLogger(SettingServices.class);
 
-    private String pageName = PageName.SETTING_PAGE.getName();
+    private String pageName = PageName.ANDROID_WIFI_PAGE.getName();
 
     @Override
     public boolean getAndroidWifi() {

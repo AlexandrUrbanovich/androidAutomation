@@ -3,8 +3,10 @@ package services.modules;
 import com.google.inject.AbstractModule;
 import com.google.inject.Scopes;
 import services.AndroidWifiServices;
+import services.DisplayServices;
 import services.SettingServices;
 import services.interfaces.IAndroidWifiServices;
+import services.interfaces.IDisplayServices;
 import services.interfaces.ISettingServices;
 
 public class CustomFrameworkModule extends AbstractModule {
@@ -13,5 +15,6 @@ public class CustomFrameworkModule extends AbstractModule {
     protected void configure() {
         bind(ISettingServices.class).to(SettingServices.class).in(Scopes.SINGLETON);
         bind(IAndroidWifiServices.class).to(AndroidWifiServices.class).in(Scopes.SINGLETON);
+        bind(IDisplayServices.class).to(DisplayServices.class).in(Scopes.SINGLETON);
     }
 }

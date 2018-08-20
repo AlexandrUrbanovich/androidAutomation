@@ -3,6 +3,7 @@ import core.AndroidDriverCreator;
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 import services.interfaces.IAndroidWifiServices;
+import services.interfaces.IDisplayServices;
 import services.interfaces.ISettingServices;
 import tools.LogMessage;
 
@@ -14,6 +15,9 @@ public class SettingTest extends SettingsForTests {
 
     @Inject
     public IAndroidWifiServices androidWifiServices;
+
+    @Inject
+    public IDisplayServices displayServices;
 
     @Test
     public void settingTest() {
@@ -53,7 +57,19 @@ public class SettingTest extends SettingsForTests {
 
         settingServices.clickDisplayed();
 
+        softAssert.assertEquals(displayServices.getBrightness(), true, "Brightness not displayed");
+        softAssert.assertEquals(displayServices.getWallpaper(), true, "Wallpaper not displayed");
+        softAssert.assertEquals(displayServices.getSleep(), true, "Sleep not displayed");
+        softAssert.assertEquals(displayServices.getPowerButton(), true, "Power Button not displayed");
+        softAssert.assertEquals(displayServices.getScreenSaver(), true, "Screen Saver not displayed");
+        softAssert.assertEquals(displayServices.getFontSize(), true, "Font Size not displayed");
+        softAssert.assertEquals(displayServices.getDisplaySize(), true, "Display Size not displayed");
+        softAssert.assertEquals(displayServices.getRotate(), true, "Rotate not displayed");
+        softAssert.assertEquals(displayServices.getCast(), true, "Cast not displayed");
 
+        softAssert.assertAll();
+
+        AndroidDriverCreator.getDriver().navigate().back();
     }
 
 
