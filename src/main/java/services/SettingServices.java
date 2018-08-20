@@ -42,6 +42,12 @@ public class SettingServices extends PageProvider<SettingPage> implements ISetti
     }
 
     @Override
+    public void clickNotification() {
+        log.info("Notification was clicked");
+        getPage().getNotifications().click();
+    }
+
+    @Override
     public boolean getSound() {
         log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getSound().getTagName()));
         return getPage().getSound().isDisplayed();

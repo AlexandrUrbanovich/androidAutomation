@@ -7,6 +7,7 @@ public interface ISettingServices {
     boolean getDisplay();
     void clickDisplayed();
     boolean getNotifications();
+    void clickNotification();
     boolean getSound();
     boolean getApps();
     boolean getStorage();

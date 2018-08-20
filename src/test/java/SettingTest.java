@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 import services.interfaces.IAndroidWifiServices;
 import services.interfaces.IDisplayServices;
+import services.interfaces.INotificationServices;
 import services.interfaces.ISettingServices;
 import tools.LogMessage;
 
@@ -18,6 +19,9 @@ public class SettingTest extends SettingsForTests {
 
     @Inject
     public IDisplayServices displayServices;
+
+    @Inject
+    public INotificationServices notificationServices;
 
     @Test
     public void settingTest() {
@@ -66,6 +70,26 @@ public class SettingTest extends SettingsForTests {
         softAssert.assertEquals(displayServices.getDisplaySize(), true, "Display Size not displayed");
         softAssert.assertEquals(displayServices.getRotate(), true, "Rotate not displayed");
         softAssert.assertEquals(displayServices.getCast(), true, "Cast not displayed");
+
+        softAssert.assertAll();
+
+        AndroidDriverCreator.getDriver().navigate().back();
+    }
+
+    @Test
+    public void notificationTest() {
+        log.info(LogMessage.getLogTest("notificationTest"));
+
+        settingServices.clickNotification();
+
+        softAssert.assertEquals(notificationServices.getAndroidKeyboard(), true, "Android Keyboard not displayed");
+        softAssert.assertEquals(notificationServices.getApiDemos(), true, "API DEMON not displayed");
+        softAssert.assertEquals(notificationServices.getAppiumSettings(), true, "Appium Settings not displayed");
+        softAssert.assertEquals(notificationServices.getCalculator(), true, "Calculator not displayed");
+        softAssert.assertEquals(notificationServices.getCalendar(), true, "Calendar not displayed");
+        softAssert.assertEquals(notificationServices.getCamera(), true, "Camera not displayed");
+        softAssert.assertEquals(notificationServices.getClock(), true, "Clock not displayed");
+        softAssert.assertEquals(notificationServices.getContacts(), true, "Contacts not displayed");
 
         softAssert.assertAll();
 
