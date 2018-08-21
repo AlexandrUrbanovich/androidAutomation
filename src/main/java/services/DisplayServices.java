@@ -13,55 +13,55 @@ public class DisplayServices extends PageProvider<DisplayPage> implements IDispl
 
     @Override
     public boolean getBrightness() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getBrightness().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getBrightness().getText()));
         return getPage().getBrightness().isDisplayed();
     }
 
     @Override
     public boolean getWallpaper() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getWallpaper().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getWallpaper().getText()));
         return getPage().getWallpaper().isDisplayed();
     }
 
     @Override
     public boolean getSleep() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getSleep().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getSleep().getText()));
         return getPage().getSleep().isDisplayed();
     }
 
     @Override
     public boolean getPowerButton() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getPowerButton().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getPowerButton().getText()));
         return getPage().getPowerButton().isDisplayed();
     }
 
     @Override
     public boolean getScreenSaver() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getScreenSaver().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getScreenSaver().getText()));
         return getPage().getScreenSaver().isDisplayed();
     }
 
     @Override
     public boolean getFontSize() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getFontSize().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getFontSize().getText()));
         return getPage().getFontSize().isDisplayed();
     }
 
     @Override
     public boolean getDisplaySize() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getDisplaySize().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getDisplaySize().getText()));
         return getPage().getDisplaySize().isDisplayed();
     }
 
     @Override
     public boolean getRotate() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getRotate().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getRotate().getText()));
         return getPage().getRotate().isDisplayed();
     }
 
     @Override
     public boolean getCast() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getCast().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getCast().getText()));
         return getPage().getCast().isDisplayed();
     }
 }
