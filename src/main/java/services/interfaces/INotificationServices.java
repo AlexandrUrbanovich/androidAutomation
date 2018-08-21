@@ -9,4 +9,5 @@ public interface INotificationServices {
     boolean getCamera();
     boolean getClock();
     boolean getContacts();
+    boolean getDocuments();
 }

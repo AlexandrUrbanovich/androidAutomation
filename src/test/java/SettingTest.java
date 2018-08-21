@@ -90,6 +90,7 @@ public class SettingTest extends SettingsForTests {
         softAssert.assertEquals(notificationServices.getCamera(), true, "Camera not displayed");
         softAssert.assertEquals(notificationServices.getClock(), true, "Clock not displayed");
         softAssert.assertEquals(notificationServices.getContacts(), true, "Contacts not displayed");
+        softAssert.assertEquals(notificationServices.getDocuments(), true, "Documents not displayed");
 
         softAssert.assertAll();
 

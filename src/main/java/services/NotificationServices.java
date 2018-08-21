@@ -13,49 +13,55 @@ public class NotificationServices extends PageProvider<NotificationPage> impleme
 
     @Override
     public boolean getAndroidKeyboard() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getAndroidKeyboard().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getAndroidKeyboard().getText()));
         return getPage().getAndroidKeyboard().isDisplayed();
     }
 
     @Override
     public boolean getApiDemos() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getApiDemos().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getApiDemos().getText()));
         return getPage().getApiDemos().isDisplayed();
     }
 
     @Override
     public boolean getAppiumSettings() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getAppiumSettings().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getAppiumSettings().getText()));
         return getPage().getAppiumSettings().isDisplayed();
     }
 
     @Override
     public boolean getCalculator() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getCalculator().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getCalculator().getText()));
         return getPage().getCalculator().isDisplayed();
     }
 
     @Override
     public boolean getCalendar() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getCalendar().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getCalendar().getText()));
         return getPage().getCalendar().isDisplayed();
     }
 
     @Override
     public boolean getCamera() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getCamera().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getCamera().getText()));
         return getPage().getCamera().isDisplayed();
     }
 
     @Override
     public boolean getClock() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getClock().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getClock().getText()));
         return getPage().getClock().isDisplayed();
     }
 
     @Override
     public boolean getContacts() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getContacts().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getContacts().getText()));
         return getPage().getContacts().isDisplayed();
+    }
+
+    @Override
+    public boolean getDocuments() {
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getDocuments().getText()));
+        return getPage().getDocuments().isDisplayed();
     }
 }
