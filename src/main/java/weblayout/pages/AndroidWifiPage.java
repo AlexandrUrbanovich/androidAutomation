@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 public class AndroidWifiPage extends BasePage {
 
-    @AndroidFindBy(accessibility = "AndroidWifi,Connected,Wifi signal full.")
+    @AndroidFindBy(uiAutomator = "new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().textMatches(\".*AndroidWifi.*\"))")
     private WebElement androidWifi;
 
     @AndroidFindBy(id = "com.android.settings:id/switch_widget")

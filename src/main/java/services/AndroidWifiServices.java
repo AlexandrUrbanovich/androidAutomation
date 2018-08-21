@@ -13,13 +13,13 @@ public class AndroidWifiServices extends PageProvider<AndroidWifiPage> implement
 
     @Override
     public boolean getAndroidWifi() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getAndroidWifi().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getAndroidWifi().getText()));
         return getPage().getAndroidWifi().isDisplayed();
     }
 
     @Override
     public boolean getOnOffSelector() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getOnOffSelector().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getOnOffSelector().getText()));
         return getPage().getOnOffSelector().isEnabled();
     }
 
