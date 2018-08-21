@@ -37,7 +37,7 @@ public class SettingServices extends PageProvider<SettingPage> implements ISetti
 
     @Override
     public boolean getNotifications() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getNotifications().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getNotifications().getText()));
         return getPage().getNotifications().isDisplayed();
     }
 
@@ -49,37 +49,37 @@ public class SettingServices extends PageProvider<SettingPage> implements ISetti
 
     @Override
     public boolean getSound() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getSound().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getSound().getText()));
         return getPage().getSound().isDisplayed();
     }
 
     @Override
     public boolean getApps() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getApps().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getApps().getText()));
         return getPage().getApps().isDisplayed();
     }
 
     @Override
     public boolean getStorage() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getStorage().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getStorage().getText()));
         return getPage().getStorage().isDisplayed();
     }
 
     @Override
     public boolean getBattery() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getBattery().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getBattery().getText()));
         return getPage().getBattery().isDisplayed();
     }
 
     @Override
     public boolean getMemory() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getMemory().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getMemory().getText()));
         return getPage().getMemory().isDisplayed();
     }
 
     @Override
     public boolean getUsers() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getUsers().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getUsers().getText()));
         return getPage().getUsers().isDisplayed();
     }
 
