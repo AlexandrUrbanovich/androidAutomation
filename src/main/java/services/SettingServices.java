@@ -13,7 +13,7 @@ public class SettingServices extends PageProvider<SettingPage> implements ISetti
 
     @Override
     public boolean getWifi() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getWifi().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getWifi().getText()));
         return getPage().getWifi().isDisplayed();
     }
 
@@ -25,7 +25,7 @@ public class SettingServices extends PageProvider<SettingPage> implements ISetti
 
     @Override
     public boolean getDisplay() {
-        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getDisplay().getTagName()));
+        log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getDisplay().getText()));
         return getPage().getDisplay().isDisplayed();
     }
 
