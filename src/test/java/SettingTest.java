@@ -29,8 +29,6 @@ public class SettingTest extends SettingsForTests {
     public void settingTest() {
         log.info(LogMessage.getLogTest("settingTest"));
 
-        log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
-
         softAssert.assertEquals(settingServices.getWifi(), true, "Wifi not displayed");
         softAssert.assertEquals(settingServices.getDisplay(), true, "Display not displayed");
         softAssert.assertEquals(settingServices.getNotifications(), true, "Notification not displayed");
@@ -42,6 +40,8 @@ public class SettingTest extends SettingsForTests {
         softAssert.assertEquals(settingServices.getUsers(), true, "Users not displayed");
 
         softAssert.assertAll();
+
+        log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
 
     }
 
@@ -67,8 +67,6 @@ public class SettingTest extends SettingsForTests {
 
         settingServices.clickDisplayed();
 
-        log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
-
         softAssert.assertEquals(displayServices.getBrightness(), true, "Brightness not displayed");
         softAssert.assertEquals(displayServices.getWallpaper(), true, "Wallpaper not displayed");
         softAssert.assertEquals(displayServices.getSleep(), true, "Sleep not displayed");
@@ -81,6 +79,8 @@ public class SettingTest extends SettingsForTests {
 
         softAssert.assertAll();
 
+        log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
+
         AndroidDriverCreator.getDriver().navigate().back();
     }
 
@@ -89,8 +89,6 @@ public class SettingTest extends SettingsForTests {
         log.info(LogMessage.getLogTest("notificationTest"));
 
         settingServices.clickNotification();
-
-        log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
 
         softAssert.assertEquals(notificationServices.getAndroidKeyboard(), true, "Android Keyboard not displayed");
         softAssert.assertEquals(notificationServices.getApiDemos(), true, "API DEMON not displayed");
@@ -103,6 +101,8 @@ public class SettingTest extends SettingsForTests {
         softAssert.assertEquals(notificationServices.getDocuments(), true, "Documents not displayed");
 
         softAssert.assertAll();
+
+        log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
 
         AndroidDriverCreator.getDriver().navigate().back();
     }
