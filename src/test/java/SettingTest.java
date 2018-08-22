@@ -6,7 +6,7 @@ import services.interfaces.IAndroidWifiServices;
 import services.interfaces.IDisplayServices;
 import services.interfaces.INotificationServices;
 import services.interfaces.ISettingServices;
-import tools.LogMessage;
+import tools.logger.LogMessage;
 
 public class SettingTest extends SettingsForTests {
     private static final Logger log = Logger.getLogger(SettingTest.class);

@@ -3,7 +3,7 @@ package services;
 import enums.PageName;
 import org.apache.log4j.Logger;
 import services.interfaces.ISettingServices;
-import tools.LogMessage;
+import tools.logger.LogMessage;
 import weblayout.pages.SettingPage;
 
 public class SettingServices extends PageProvider<SettingPage> implements ISettingServices {

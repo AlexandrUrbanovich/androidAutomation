@@ -3,7 +3,7 @@ package services;
 import enums.PageName;
 import org.apache.log4j.Logger;
 import services.interfaces.INotificationServices;
-import tools.LogMessage;
+import tools.logger.LogMessage;
 import weblayout.pages.NotificationPage;
 
 public class NotificationServices extends PageProvider<NotificationPage> implements INotificationServices {

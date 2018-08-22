@@ -3,7 +3,7 @@ package services;
 import enums.PageName;
 import org.apache.log4j.Logger;
 import services.interfaces.IDisplayServices;
-import tools.LogMessage;
+import tools.logger.LogMessage;
 import weblayout.pages.DisplayPage;
 
 public class DisplayServices extends PageProvider<DisplayPage> implements IDisplayServices {

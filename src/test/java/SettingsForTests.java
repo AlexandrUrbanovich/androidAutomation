@@ -5,7 +5,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Guice;
 import org.testng.asserts.SoftAssert;
 import services.modules.CustomFrameworkModule;
-import tools.AppiumServerJava;
+import tools.appiumServer.AppiumServerJava;
 
 @Guice(modules = {CustomFrameworkModule.class})
 public class SettingsForTests {

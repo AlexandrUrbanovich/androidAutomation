@@ -1,4 +1,4 @@
-package tools;
+package tools.appiumServer;
 
 import core.DesiredCapabilitiesManager;
 import io.appium.java_client.service.local.AppiumDriverLocalService;

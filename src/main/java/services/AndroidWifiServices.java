@@ -3,7 +3,7 @@ package services;
 import enums.PageName;
 import org.apache.log4j.Logger;
 import services.interfaces.IAndroidWifiServices;
-import tools.LogMessage;
+import tools.logger.LogMessage;
 import weblayout.pages.AndroidWifiPage;
 
 public class AndroidWifiServices extends PageProvider<AndroidWifiPage> implements IAndroidWifiServices {

@@ -1,4 +1,4 @@
-package tools;
+package tools.logger;
 
 public class LogMessage {
 
