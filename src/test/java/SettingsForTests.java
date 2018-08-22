@@ -1,8 +1,6 @@
+import core.AndroidDriverCreator;
 import org.apache.log4j.Logger;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Guice;
+import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import services.modules.CustomFrameworkModule;
 import tools.appiumServer.AppiumServerJava;
@@ -25,6 +23,12 @@ public class SettingsForTests {
         log.info("SoftAssert was created");
         softAssert = new SoftAssert();
     }
+
+//    @AfterTest
+//    public void delCookie() {
+//        log.info("Cookie was cleaned");
+//        AndroidDriverCreator.getDriver().manage().deleteAllCookies();
+//    }
 
     @AfterSuite
     public void afterSuit() {
