@@ -90,6 +90,8 @@ public class SettingTest extends SettingsForTests {
 
         settingServices.clickNotification();
 
+        log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
+
         softAssert.assertEquals(notificationServices.getAndroidKeyboard(), true, "Android Keyboard not displayed");
         softAssert.assertEquals(notificationServices.getApiDemos(), true, "API DEMON not displayed");
         softAssert.assertEquals(notificationServices.getAppiumSettings(), true, "Appium Settings not displayed");
