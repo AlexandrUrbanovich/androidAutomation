@@ -8,6 +8,8 @@ import services.interfaces.INotificationServices;
 import services.interfaces.ISettingServices;
 import tools.logger.LogMessage;
 
+import static tools.screenshot.ScreenShot.makeScreeShot;
+
 public class SettingTest extends SettingsForTests {
     private static final Logger log = Logger.getLogger(SettingTest.class);
 
@@ -26,6 +28,8 @@ public class SettingTest extends SettingsForTests {
     @Test
     public void settingTest() {
         log.info(LogMessage.getLogTest("settingTest"));
+
+        log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
 
         softAssert.assertEquals(settingServices.getWifi(), true, "Wifi not displayed");
         softAssert.assertEquals(settingServices.getDisplay(), true, "Display not displayed");
@@ -47,6 +51,8 @@ public class SettingTest extends SettingsForTests {
 
         settingServices.clickWifi();
 
+        log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
+
         softAssert.assertEquals(androidWifiServices.getAndroidWifi(), true, "Android Wi-Fi not displayed");
         softAssert.assertEquals(androidWifiServices.getOnOffSelector(), true, "On Off Selector not displayed");
 
@@ -60,6 +66,8 @@ public class SettingTest extends SettingsForTests {
         log.info(LogMessage.getLogTest("displayedTest"));
 
         settingServices.clickDisplayed();
+
+        log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
 
         softAssert.assertEquals(displayServices.getBrightness(), true, "Brightness not displayed");
         softAssert.assertEquals(displayServices.getWallpaper(), true, "Wallpaper not displayed");
