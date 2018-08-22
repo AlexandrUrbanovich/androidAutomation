@@ -19,8 +19,8 @@ public class SettingServices extends PageProvider<SettingPage> implements ISetti
 
     @Override
     public void clickWifi() {
-        log.info("Wifi was clicked");
         getPage().getWifi().click();
+        log.info("Wifi was clicked");
     }
 
     @Override
@@ -31,8 +31,8 @@ public class SettingServices extends PageProvider<SettingPage> implements ISetti
 
     @Override
     public void clickDisplayed() {
-        log.info("Displayed was clicked");
         getPage().getDisplay().click();
+        log.info("Displayed was clicked");
     }
 
     @Override
@@ -43,8 +43,8 @@ public class SettingServices extends PageProvider<SettingPage> implements ISetti
 
     @Override
     public void clickNotification() {
-        log.info("Notification was clicked");
         getPage().getNotifications().click();
+        log.info("Notification was clicked");
     }
 
     @Override

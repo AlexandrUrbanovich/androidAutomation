@@ -51,12 +51,12 @@ public class SettingTest extends SettingsForTests {
 
         settingServices.clickWifi();
 
-        log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
-
         softAssert.assertEquals(androidWifiServices.getAndroidWifi(), true, "Android Wi-Fi not displayed");
         softAssert.assertEquals(androidWifiServices.getOnOffSelector(), true, "On Off Selector not displayed");
 
         softAssert.assertAll();
+
+        log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
 
         AndroidDriverCreator.getDriver().navigate().back();
     }

@@ -14,14 +14,14 @@ public class SettingsForTests {
 
     @BeforeSuite
     public void beforeSuite() {
-        log.info("Server RUN!!!");
         appiumServerJava.startServer();
+        log.info("Server RUN!!!");
     }
 
     @BeforeMethod
     public void beforeMethod() {
-        log.info("SoftAssert was created");
         softAssert = new SoftAssert();
+        log.info("SoftAssert was created");
     }
 
 //    @AfterTest
@@ -32,7 +32,7 @@ public class SettingsForTests {
 
     @AfterSuite
     public void afterSuit() {
-        log.info("Server STOP!!!");
         appiumServerJava.stopServer();
+        log.info("Server STOP!!!");
     }
 }
