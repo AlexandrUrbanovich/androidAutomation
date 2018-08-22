@@ -6,8 +6,21 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
+test {
+    useTestNG() {
+        outputDirectory = file("$project.buildDir//testng-output")
+        useDefaultListeners = true
+        reports.html.enabled = false
+    }
+}
+
 repositories {
-    mavenCentral()
+    jcenter {
+        url("http://dl.bintray.com/epam/reportportal")
+}
+    maven {
+        url("https://plugins.gradle.org/m2/")
+    }
 }
 
 dependencies {
@@ -27,5 +40,9 @@ dependencies {
     compile group: 'io.appium', name: 'java-client', version: '6.1.0'
 
 
+    //dependence for ReportPortal
+    compile group: 'com.epam.reportportal', name: 'agent-java-testng', version: '4.2.0'
+    compile group: 'com.epam.reportportal', name: 'logger-java-logback', version: '4.0.0'
+    compile group: 'com.epam.reportportal', name: 'logger-java-log4j', version: '4.0.1'
 
 }
