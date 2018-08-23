@@ -29,9 +29,6 @@ public class SettingTest extends SettingsForTests {
     public void settingTest() {
         log.info(LogMessage.getLogTest("settingTest"));
 
-//        settingServices.clickAppss();
-//        settingServices.clickSettings();
-
         softAssert.assertEquals(settingServices.getWifi(), true, "Wifi not displayed");
         softAssert.assertEquals(settingServices.getDisplay(), true, "Display not displayed");
         softAssert.assertEquals(settingServices.getNotifications(), true, "Notification not displayed");
@@ -52,10 +49,6 @@ public class SettingTest extends SettingsForTests {
     public void androidWifiTest() {
         log.info(LogMessage.getLogTest("androidWifiTest"));
 
-//        settingServices.clickWidjet();
-//        settingServices.clickAppss();
-//        settingServices.clickSettings();
-
         settingServices.clickWifi();
 
         softAssert.assertEquals(androidWifiServices.getAndroidWifi(), true, "Android Wi-Fi not displayed");
@@ -71,10 +64,6 @@ public class SettingTest extends SettingsForTests {
     @Test
     public void displayedTest() {
         log.info(LogMessage.getLogTest("displayedTest"));
-
-//        AndroidDriverCreator.getDriver().switchTo().parentFrame();
-//        settingServices.clickAppss();
-//        settingServices.clickSettings();
 
         settingServices.clickDisplayed();
 
@@ -99,9 +88,6 @@ public class SettingTest extends SettingsForTests {
     public void notificationTest() {
         log.info(LogMessage.getLogTest("notificationTest"));
 
-//        settingServices.clickAppss();
-//        settingServices.clickSettings();
-
         settingServices.clickNotification();
 
         softAssert.assertEquals(notificationServices.getAndroidKeyboard(), true, "Android Keyboard not displayed");
@@ -120,7 +106,6 @@ public class SettingTest extends SettingsForTests {
 
         AndroidDriverCreator.getDriver().navigate().back();
     }
-
 
 
 }
