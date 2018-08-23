@@ -9,9 +9,11 @@ import java.time.temporal.ChronoUnit;
 public class SettingPage extends BasePage {
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@content-desc=\"Apps\"]")
+    @WithTimeout(time = 20, chronoUnit = ChronoUnit.SECONDS)
     private WebElement appss;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@content-desc=\"Settings\"]")
+    @WithTimeout(time = 20, chronoUnit = ChronoUnit.SECONDS)
     private WebElement settings;
 
     @AndroidFindBy(uiAutomator = "new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().textMatches(\".*Wi‑Fi.*\"))")
