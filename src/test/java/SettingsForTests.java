@@ -3,7 +3,6 @@ import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import services.modules.CustomFrameworkModule;
 import tools.appiumServer.AppiumServerJava;
-import tools.cmd.CmdManager;
 import tools.cmd.enamCommand.CmdCommands;
 
 @Guice(modules = {CustomFrameworkModule.class})
