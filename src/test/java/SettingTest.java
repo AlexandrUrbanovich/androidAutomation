@@ -30,6 +30,8 @@ public class SettingTest extends SettingsForTests {
     public void settingTest() {
         log.info(LogMessage.getLogTest("settingTest"));
 
+        settingServices.clickAppss();
+        settingServices.clickSettings();
 
         softAssert.assertEquals(settingServices.getWifi(), true, "Wifi not displayed");
         softAssert.assertEquals(settingServices.getDisplay(), true, "Display not displayed");
@@ -53,6 +55,9 @@ public class SettingTest extends SettingsForTests {
     public void androidWifiTest() {
         log.info(LogMessage.getLogTest("androidWifiTest"));
 
+        settingServices.clickAppss();
+        settingServices.clickSettings();
+
         settingServices.clickWifi();
 
         softAssert.assertEquals(androidWifiServices.getAndroidWifi(), true, "Android Wi-Fi not displayed");
@@ -70,6 +75,9 @@ public class SettingTest extends SettingsForTests {
     @Test
     public void displayedTest() {
         log.info(LogMessage.getLogTest("displayedTest"));
+
+        settingServices.clickAppss();
+        settingServices.clickSettings();
 
         settingServices.clickDisplayed();
 
@@ -95,6 +103,9 @@ public class SettingTest extends SettingsForTests {
     @Test
     public void notificationTest() {
         log.info(LogMessage.getLogTest("notificationTest"));
+
+        settingServices.clickAppss();
+        settingServices.clickSettings();
 
         settingServices.clickNotification();
 
