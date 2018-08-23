@@ -14,8 +14,10 @@ public class DesiredCapabilitiesManager {
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("deviceName", "Android Emulator");
         capabilities.setCapability("platformVersion", "7.0");
-        capabilities.setCapability("appPackage", "com.android.settings");
-        capabilities.setCapability("appActivity", "com.android.settings.Settings");
+//        capabilities.setCapability("appPackage", "com.android.settings");
+        capabilities.setCapability("appPackage", "com.android.launcher3");
+//        capabilities.setCapability("appActivity", "com.android.settings.Settings");
+        capabilities.setCapability("appActivity", "com.android.launcher3.Launcher");
 
         return capabilities;
     }

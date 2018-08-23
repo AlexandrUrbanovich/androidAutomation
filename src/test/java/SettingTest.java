@@ -30,8 +30,6 @@ public class SettingTest extends SettingsForTests {
     public void settingTest() {
         log.info(LogMessage.getLogTest("settingTest"));
 
-        CmdClass.rebootEmulator();
-
         softAssert.assertEquals(settingServices.getWifi(), true, "Wifi not displayed");
         softAssert.assertEquals(settingServices.getDisplay(), true, "Display not displayed");
         softAssert.assertEquals(settingServices.getNotifications(), true, "Notification not displayed");
@@ -45,6 +43,8 @@ public class SettingTest extends SettingsForTests {
         softAssert.assertAll();
 
         log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
+
+        CmdClass.rebootEmulator();
 
     }
 
