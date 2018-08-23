@@ -30,7 +30,6 @@ public class SettingTest extends SettingsForTests {
     public void settingTest() {
         log.info(LogMessage.getLogTest("settingTest"));
 
-        settingServices.clickWidjet();
         settingServices.clickAppss();
         settingServices.clickSettings();
 
@@ -56,6 +55,7 @@ public class SettingTest extends SettingsForTests {
     public void androidWifiTest() {
         log.info(LogMessage.getLogTest("androidWifiTest"));
 
+        settingServices.clickWidjet();
         settingServices.clickAppss();
         settingServices.clickSettings();
 
