@@ -1,10 +1,8 @@
-import core.AndroidDriverCreator;
 import org.apache.log4j.Logger;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import services.modules.CustomFrameworkModule;
 import tools.appiumServer.AppiumServerJava;
-import tools.cmd.CmdClass;
 
 @Guice(modules = {CustomFrameworkModule.class})
 public class SettingsForTests {
@@ -33,7 +31,7 @@ public class SettingsForTests {
         appiumServerJava.stopServer();
         log.info("Server STOP!!!");
 //
-//        CmdClass.rebootEmulator();
+//        CmdManager.cmdCommand();
 //        try {
 //            Thread.sleep(30000);
 //        } catch (InterruptedException e) {

@@ -6,7 +6,6 @@ import services.interfaces.IAndroidWifiServices;
 import services.interfaces.IDisplayServices;
 import services.interfaces.INotificationServices;
 import services.interfaces.ISettingServices;
-import tools.cmd.CmdClass;
 import tools.logger.LogMessage;
 
 import static tools.screenshot.ScreenShot.makeScreeShot;
