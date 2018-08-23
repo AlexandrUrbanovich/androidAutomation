@@ -8,6 +8,12 @@ import java.time.temporal.ChronoUnit;
 
 public class SettingPage extends BasePage {
 
+    @AndroidFindBy(accessibility = "Apps")
+    private WebElement appss;
+
+    @AndroidFindBy(accessibility = "Settings")
+    private WebElement settings;
+
     @AndroidFindBy(uiAutomator = "new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().textMatches(\".*Wi‑Fi.*\"))")
     @WithTimeout(time = 20, chronoUnit = ChronoUnit.SECONDS)
     private WebElement wifi;
@@ -70,5 +76,13 @@ public class SettingPage extends BasePage {
 
     public WebElement getUsers() {
         return users;
+    }
+
+    public WebElement getAppss() {
+        return appss;
+    }
+
+    public WebElement getSettings() {
+        return settings;
     }
 }

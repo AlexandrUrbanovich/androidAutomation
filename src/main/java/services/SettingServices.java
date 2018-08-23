@@ -12,6 +12,18 @@ public class SettingServices extends PageProvider<SettingPage> implements ISetti
     private String pageName = PageName.SETTING_PAGE.getName();
 
     @Override
+    public void getAppss() {
+        getPage().getApps().click();
+        log.info("Apps was clicked");
+    }
+
+    @Override
+    public void getSettings() {
+        getPage().getSettings().click();
+        log.info("Settings was clicked");
+    }
+
+    @Override
     public boolean getWifi() {
         log.info(LogMessage.getMessageThatElementPresentOnPage(pageName, getPage().getWifi().getText()));
         return getPage().getWifi().isDisplayed();
