@@ -3,11 +3,14 @@ import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import services.modules.CustomFrameworkModule;
 import tools.appiumServer.AppiumServerJava;
+import tools.cmd.CmdManager;
+import tools.cmd.enamCommand.CmdCommands;
 
 @Guice(modules = {CustomFrameworkModule.class})
 public class SettingsForTests {
     private static final Logger log = Logger.getLogger(SettingsForTests.class);
     public static SoftAssert softAssert;
+    private String cmdCommand = CmdCommands.REBOOT.getCommand();
 
     AppiumServerJava appiumServerJava = new AppiumServerJava();
 
@@ -30,8 +33,8 @@ public class SettingsForTests {
     public void afterMethod() {
         appiumServerJava.stopServer();
         log.info("Server STOP!!!");
-//
-//        CmdManager.cmdCommand();
+
+//        CmdManager.cmdCommand(cmdCommand);
 //        try {
 //            Thread.sleep(30000);
 //        } catch (InterruptedException e) {
