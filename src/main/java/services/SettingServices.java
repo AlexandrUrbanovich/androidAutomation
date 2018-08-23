@@ -13,8 +13,8 @@ public class SettingServices extends PageProvider<SettingPage> implements ISetti
 
     @Override
     public void clickAppss() {
-        getPage().getApps().click();
-        log.info("Apps was clicked");
+        getPage().getAppss().click();
+        log.info("Appss was clicked");
     }
 
     @Override
