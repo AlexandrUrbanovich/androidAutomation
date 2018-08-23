@@ -2,8 +2,8 @@ package services.interfaces;
 
 public interface ISettingServices {
 
-    void getAppss();
-    void getSettings();
+    void clickAppss();
+    void clickSettings();
     boolean getWifi();
     void clickWifi();
     boolean getDisplay();
