@@ -6,6 +6,7 @@ import services.interfaces.IAndroidWifiServices;
 import services.interfaces.IDisplayServices;
 import services.interfaces.INotificationServices;
 import services.interfaces.ISettingServices;
+import tools.cmd.CmdClass;
 import tools.logger.LogMessage;
 
 import static tools.screenshot.ScreenShot.makeScreeShot;
@@ -28,6 +29,8 @@ public class SettingTest extends SettingsForTests {
     @Test
     public void settingTest() {
         log.info(LogMessage.getLogTest("settingTest"));
+
+        CmdClass.rebootEmulator();
 
         softAssert.assertEquals(settingServices.getWifi(), true, "Wifi not displayed");
         softAssert.assertEquals(settingServices.getDisplay(), true, "Display not displayed");
@@ -58,7 +61,9 @@ public class SettingTest extends SettingsForTests {
 
         log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
 
-        AndroidDriverCreator.getDriver().navigate().back();
+        CmdClass.rebootEmulator();
+
+//        AndroidDriverCreator.getDriver().navigate().back();
     }
 
     @Test
@@ -81,7 +86,9 @@ public class SettingTest extends SettingsForTests {
 
         log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
 
-        AndroidDriverCreator.getDriver().navigate().back();
+        CmdClass.rebootEmulator();
+
+//        AndroidDriverCreator.getDriver().navigate().back();
     }
 
     @Test
@@ -104,7 +111,9 @@ public class SettingTest extends SettingsForTests {
 
         log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
 
-        AndroidDriverCreator.getDriver().navigate().back();
+        CmdClass.rebootEmulator();
+
+//        AndroidDriverCreator.getDriver().navigate().back();
     }
 
 
