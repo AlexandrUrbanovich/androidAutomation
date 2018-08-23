@@ -2,6 +2,7 @@ package services.interfaces;
 
 public interface ISettingServices {
 
+    void clickWidjet();
     void clickAppss();
     void clickSettings();
     boolean getWifi();

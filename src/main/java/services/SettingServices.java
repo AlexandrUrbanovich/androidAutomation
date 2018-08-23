@@ -12,6 +12,11 @@ public class SettingServices extends PageProvider<SettingPage> implements ISetti
     private String pageName = PageName.SETTING_PAGE.getName();
 
     @Override
+    public void clickWidjet() {
+        getPage().getWidjet().click();
+    }
+
+    @Override
     public void clickAppss() {
         getPage().getAppss().click();
         log.info("Appss was clicked");

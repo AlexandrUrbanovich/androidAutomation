@@ -8,6 +8,9 @@ import java.time.temporal.ChronoUnit;
 
 public class SettingPage extends BasePage {
 
+    @AndroidFindBy(id = "com.android.launcher3:id/cling_dismiss_longpress_info")
+    private WebElement widjet;
+
     @AndroidFindBy(xpath = "//android.widget.TextView[@content-desc=\"Apps\"]")
     @WithTimeout(time = 20, chronoUnit = ChronoUnit.SECONDS)
     private WebElement appss;
@@ -86,5 +89,9 @@ public class SettingPage extends BasePage {
 
     public WebElement getSettings() {
         return settings;
+    }
+
+    public WebElement getWidjet() {
+        return widjet;
     }
 }

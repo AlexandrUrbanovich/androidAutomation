@@ -30,6 +30,7 @@ public class SettingTest extends SettingsForTests {
     public void settingTest() {
         log.info(LogMessage.getLogTest("settingTest"));
 
+        settingServices.clickWidjet();
         settingServices.clickAppss();
         settingServices.clickSettings();
 
