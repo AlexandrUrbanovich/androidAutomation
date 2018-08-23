@@ -4,6 +4,7 @@ import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import services.modules.CustomFrameworkModule;
 import tools.appiumServer.AppiumServerJava;
+import tools.cmd.CmdClass;
 
 @Guice(modules = {CustomFrameworkModule.class})
 public class SettingsForTests {
@@ -12,16 +13,32 @@ public class SettingsForTests {
 
     AppiumServerJava appiumServerJava = new AppiumServerJava();
 
-    @BeforeSuite
-    public void beforeSuite() {
-        appiumServerJava.startServer();
-        log.info("Server RUN!!!");
-    }
+//    @BeforeSuite
+//    public void beforeSuite() {
+//        appiumServerJava.startServer();
+//        log.info("Server RUN!!!");
+//    }
 
     @BeforeMethod
     public void beforeMethod() {
+
+        appiumServerJava.startServer();
+        log.info("Server RUN!!!");
         softAssert = new SoftAssert();
         log.info("SoftAssert was created");
+    }
+
+    @AfterMethod
+    public void afterMethod() {
+        appiumServerJava.stopServer();
+        log.info("Server STOP!!!");
+//
+//        CmdClass.rebootEmulator();
+//        try {
+//            Thread.sleep(30000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
     }
 
 //    @AfterTest
@@ -30,9 +47,9 @@ public class SettingsForTests {
 //        AndroidDriverCreator.getDriver().manage().deleteAllCookies();
 //    }
 
-    @AfterSuite
-    public void afterSuit() {
-        appiumServerJava.stopServer();
-        log.info("Server STOP!!!");
-    }
+//    @AfterSuite
+//    public void afterSuit() {
+//        appiumServerJava.stopServer();
+//        log.info("Server STOP!!!");
+//    }
 }

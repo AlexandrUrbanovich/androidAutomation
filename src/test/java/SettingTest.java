@@ -30,8 +30,8 @@ public class SettingTest extends SettingsForTests {
     public void settingTest() {
         log.info(LogMessage.getLogTest("settingTest"));
 
-        settingServices.clickAppss();
-        settingServices.clickSettings();
+//        settingServices.clickAppss();
+//        settingServices.clickSettings();
 
         softAssert.assertEquals(settingServices.getWifi(), true, "Wifi not displayed");
         softAssert.assertEquals(settingServices.getDisplay(), true, "Display not displayed");
@@ -47,17 +47,15 @@ public class SettingTest extends SettingsForTests {
 
         log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
 
-        CmdClass.rebootEmulator();
-
     }
 
     @Test
     public void androidWifiTest() {
         log.info(LogMessage.getLogTest("androidWifiTest"));
 
-        settingServices.clickWidjet();
-        settingServices.clickAppss();
-        settingServices.clickSettings();
+//        settingServices.clickWidjet();
+//        settingServices.clickAppss();
+//        settingServices.clickSettings();
 
         settingServices.clickWifi();
 
@@ -68,17 +66,16 @@ public class SettingTest extends SettingsForTests {
 
         log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
 
-        CmdClass.rebootEmulator();
-
-//        AndroidDriverCreator.getDriver().navigate().back();
+        AndroidDriverCreator.getDriver().navigate().back();
     }
 
     @Test
     public void displayedTest() {
         log.info(LogMessage.getLogTest("displayedTest"));
 
-        settingServices.clickAppss();
-        settingServices.clickSettings();
+//        AndroidDriverCreator.getDriver().switchTo().parentFrame();
+//        settingServices.clickAppss();
+//        settingServices.clickSettings();
 
         settingServices.clickDisplayed();
 
@@ -96,17 +93,15 @@ public class SettingTest extends SettingsForTests {
 
         log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
 
-        CmdClass.rebootEmulator();
-
-//        AndroidDriverCreator.getDriver().navigate().back();
+        AndroidDriverCreator.getDriver().navigate().back();
     }
 
     @Test
     public void notificationTest() {
         log.info(LogMessage.getLogTest("notificationTest"));
 
-        settingServices.clickAppss();
-        settingServices.clickSettings();
+//        settingServices.clickAppss();
+//        settingServices.clickSettings();
 
         settingServices.clickNotification();
 
@@ -124,9 +119,7 @@ public class SettingTest extends SettingsForTests {
 
         log.info(LogMessage.sendScreenShot(makeScreeShot(AndroidDriverCreator.getDriver())));
 
-        CmdClass.rebootEmulator();
-
-//        AndroidDriverCreator.getDriver().navigate().back();
+        AndroidDriverCreator.getDriver().navigate().back();
     }
 
 
