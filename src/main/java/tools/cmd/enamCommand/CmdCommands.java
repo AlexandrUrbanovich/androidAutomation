@@ -5,9 +5,8 @@ public enum CmdCommands {
     DELETE_ALL_DATE("adb shell pm clear com.android.settings"),
     DEVICE("adb device"),
     SHELL("adb shell"),
-    ROOT("adb root"),
-    WIFI_ON("abd shell svc wifi enable"),
-    WIFI_OFF("abd shell svc wifi disable");
+    WIFI_ON("adb root && abd shell svc wifi enable"),
+    WIFI_OFF("adb root && abd shell svc wifi disable");
 
     public String name;
 
