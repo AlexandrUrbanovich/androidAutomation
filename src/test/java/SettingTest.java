@@ -7,13 +7,14 @@ import services.interfaces.IAndroidWifiServices;
 import services.interfaces.IDisplayServices;
 import services.interfaces.INotificationServices;
 import services.interfaces.ISettingServices;
+import tools.annotation.WifiControl;
 import tools.logger.LogMessage;
 
 import static tools.screenshot.ScreenShot.makeScreeShot;
 
 public class SettingTest extends SettingsForTests {
     private static final Logger log = Logger.getLogger(SettingTest.class);
-    private String wiFi = WiFi.WIFI_OFF.getName();
+    private static String wiFi = WiFi.WIFI_OFF.getName();
 
     @Inject
     public ISettingServices settingServices;
@@ -28,7 +29,7 @@ public class SettingTest extends SettingsForTests {
     public INotificationServices notificationServices;
 
     @Test
-    @ghhghg(wifi = on, location = on)
+    @WifiControl(controller = "off")
     public void settingTest() {
         log.info(LogMessage.getLogTest("settingTest"));
 
@@ -49,6 +50,7 @@ public class SettingTest extends SettingsForTests {
     }
 
     @Test
+    @WifiControl
     public void androidWifiTest() {
         log.info(LogMessage.getLogTest("androidWifiTest"));
 
