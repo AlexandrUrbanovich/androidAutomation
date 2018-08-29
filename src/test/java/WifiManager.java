@@ -14,6 +14,8 @@ public class WifiManager implements ITestListener {
     public void onTestStart(ITestResult result) {
         Class<SettingTest> obj = SettingTest.class;
 
+        System.out.println(obj.isAnnotation());
+
         if(obj.isAnnotationPresent(WifiControl.class)){
             Annotation annotation = obj.getAnnotation(WifiControl.class);
             WifiControl wifiControl = (WifiControl) annotation;
@@ -28,6 +30,7 @@ public class WifiManager implements ITestListener {
         }else{
             System.out.println("Annotation not present");
         }
+
     }
 
     @Override
