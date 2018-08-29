@@ -14,7 +14,7 @@ import static tools.screenshot.ScreenShot.makeScreeShot;
 
 public class SettingTest extends SettingsForTests {
     private static final Logger log = Logger.getLogger(SettingTest.class);
-    private static String wiFi = WiFi.WIFI_OFF.getName();
+//    private static String wiFi = WiFi.WIFI_OFF.getName();
 
     @Inject
     public ISettingServices settingServices;

@@ -6,7 +6,7 @@ import tools.appiumServer.AppiumServerJava;
 import tools.cmd.enamCommand.CmdCommands;
 
 @Guice(modules = {CustomFrameworkModule.class})
-@Listeners()
+@Listeners(WifiManager.class)
 public class SettingsForTests {
     private static final Logger log = Logger.getLogger(SettingsForTests.class);
     public static SoftAssert softAssert;
