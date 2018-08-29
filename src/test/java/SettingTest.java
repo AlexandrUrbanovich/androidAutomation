@@ -29,7 +29,6 @@ public class SettingTest extends SettingsForTests {
     public INotificationServices notificationServices;
 
     @Test
-    @WifiControl(controller = "off")
     public void settingTest() {
         log.info(LogMessage.getLogTest("settingTest"));
 
@@ -50,7 +49,7 @@ public class SettingTest extends SettingsForTests {
     }
 
     @Test
-    @WifiControl
+    @WifiControl(controller = "off")
     public void androidWifiTest() {
         log.info(LogMessage.getLogTest("androidWifiTest"));
 

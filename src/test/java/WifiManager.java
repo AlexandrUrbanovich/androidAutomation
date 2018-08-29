@@ -18,7 +18,7 @@ public class WifiManager implements ITestListener {
             Annotation annotation = obj.getAnnotation(WifiControl.class);
             WifiControl wifiControl = (WifiControl) annotation;
 
-            System.out.printf("WiFi : %s", wifiControl.controller());
+            System.out.println("WiFi : " + wifiControl.controller());
 
             if(wifiControl.controller() == "off"){
                 CmdManager.cmdCommand(cmdCommand);
@@ -32,31 +32,31 @@ public class WifiManager implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        System.out.println("indefined");
+        System.out.println("onTestSuccess indefined");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
-        System.out.println("indefined");
+        System.out.println("onTestFailure indefined");
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        System.out.println("indefined");
+        System.out.println("onTestSkipped indefined");
     }
 
     @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-        System.out.println("indefined");
+        System.out.println("onTestFailedButWithinSuccessPercentage indefined");
     }
 
     @Override
     public void onStart(ITestContext context) {
-        System.out.println("indefined");
+        System.out.println("onStart indefined");
     }
 
     @Override
     public void onFinish(ITestContext context) {
-        System.out.println("indefined");
+        System.out.println("onFinish indefined");
     }
 }
