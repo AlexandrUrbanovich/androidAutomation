@@ -1,5 +1,6 @@
 import com.google.inject.Inject;
 import core.AndroidDriverCreator;
+import enums.WiFi;
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 import services.interfaces.IAndroidWifiServices;
@@ -12,6 +13,7 @@ import static tools.screenshot.ScreenShot.makeScreeShot;
 
 public class SettingTest extends SettingsForTests {
     private static final Logger log = Logger.getLogger(SettingTest.class);
+    private String wiFi = WiFi.WIFI_OFF.getName();
 
     @Inject
     public ISettingServices settingServices;
@@ -26,6 +28,7 @@ public class SettingTest extends SettingsForTests {
     public INotificationServices notificationServices;
 
     @Test
+    @ghhghg(wifi = on, location = on)
     public void settingTest() {
         log.info(LogMessage.getLogTest("settingTest"));
 
