@@ -6,7 +6,7 @@ import tools.appiumServer.AppiumServerJava;
 import tools.cmd.enamCommand.CmdCommands;
 
 @Guice(modules = {CustomFrameworkModule.class})
-@Listeners(WifiManager.class)
+//@Listeners(WifiManager.class)
 public class SettingsForTests {
     private static final Logger log = Logger.getLogger(SettingsForTests.class);
     public static SoftAssert softAssert;
@@ -14,25 +14,25 @@ public class SettingsForTests {
 
     AppiumServerJava appiumServerJava = new AppiumServerJava();
 
-//    @BeforeSuite
-//    public void beforeSuite() {
-//        appiumServerJava.startServer();
-//        log.info("Server RUN!!!");
-//    }
+    @BeforeSuite
+    public void beforeSuite() {
+        appiumServerJava.startServer();
+        log.info("Server RUN!!!");
+    }
 
     @BeforeMethod
     public void beforeMethod() {
 
-        appiumServerJava.startServer();
-        log.info("Server RUN!!!");
+//        appiumServerJava.startServer();
+//        log.info("Server RUN!!!");
         softAssert = new SoftAssert();
         log.info("SoftAssert was created");
     }
 
     @AfterMethod
     public void afterMethod() {
-        appiumServerJava.stopServer();
-        log.info("Server STOP!!!");
+//        appiumServerJava.stopServer();
+//        log.info("Server STOP!!!");
 
 //        CmdManager.cmdCommand(cmdCommand);
 //        try {
@@ -48,9 +48,9 @@ public class SettingsForTests {
 //        AndroidDriverCreator.getDriver().manage().deleteAllCookies();
 //    }
 
-//    @AfterSuite
-//    public void afterSuit() {
-//        appiumServerJava.stopServer();
-//        log.info("Server STOP!!!");
-//    }
+    @AfterSuite
+    public void afterSuit() {
+        appiumServerJava.stopServer();
+        log.info("Server STOP!!!");
+    }
 }
