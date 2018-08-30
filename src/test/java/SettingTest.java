@@ -1,13 +1,12 @@
 import com.google.inject.Inject;
 import core.AndroidDriverCreator;
-import enums.WiFi;
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 import services.interfaces.IAndroidWifiServices;
 import services.interfaces.IDisplayServices;
 import services.interfaces.INotificationServices;
 import services.interfaces.ISettingServices;
-import tools.annotation.WifiControl;
+import tools.annotation.PreconditionManager;
 import tools.logger.LogMessage;
 
 import static tools.screenshot.ScreenShot.makeScreeShot;
@@ -49,7 +48,7 @@ public class SettingTest extends SettingsForTests {
     }
 
     @Test
-    @WifiControl(controller = "off")
+    @PreconditionManager(controllerWiFi = "off")
     public void androidWifiTest() {
         log.info(LogMessage.getLogTest("androidWifiTest"));
 

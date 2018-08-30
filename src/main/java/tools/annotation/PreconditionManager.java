@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-public @interface WifiControl {
+public @interface PreconditionManager {
 
-    String controller() default "on";
+    String controllerWiFi() default "on";
 }
