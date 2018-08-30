@@ -24,6 +24,7 @@ public class InvokedMetod implements IInvokedMethodListener {
         }else{
             System.out.println("Annotation not present");
         }
+
     }
 
     @Override
