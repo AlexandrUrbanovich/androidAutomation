@@ -1,6 +1,7 @@
 import com.google.inject.Inject;
 import core.AndroidDriverCreator;
 import org.apache.log4j.Logger;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import services.interfaces.IAndroidWifiServices;
 import services.interfaces.IDisplayServices;
@@ -11,6 +12,7 @@ import tools.logger.LogMessage;
 
 import static tools.screenshot.ScreenShot.makeScreeShot;
 
+@Listeners(InvokedMetod.class)
 public class SettingTest extends SettingsForTests {
     private static final Logger log = Logger.getLogger(SettingTest.class);
 //    private static String wiFi = WiFi.WIFI_OFF.getName();

@@ -3,8 +3,6 @@ import tools.annotation.PreconditionManager;
 import tools.cmd.CmdManager;
 import tools.cmd.enamCommand.CmdCommands;
 
-import java.lang.annotation.Annotation;
-
 public class InvokedMetod implements IInvokedMethodListener {
 
     @Override
@@ -13,18 +11,13 @@ public class InvokedMetod implements IInvokedMethodListener {
 
         System.out.println("pManager -> " + pManager);
 
-        Class<SettingTest> obj = SettingTest.class;
+        if(pManager != null){
 
-        System.out.println("obj.isAnnotation() -> " + obj.isAnnotation());
+            System.out.println("pManager.controllerWiFi -> " + pManager.controllerWiFi());
 
-        if(obj.isAnnotationPresent(PreconditionManager.class)){
-            Annotation annotation = obj.getAnnotation(PreconditionManager.class);
-            PreconditionManager wifiControl = (PreconditionManager) annotation;
-
-            System.out.println("WiFi : " + wifiControl.controllerWiFi());
-
-            if(wifiControl.controllerWiFi() == "off"){
+            if(pManager.controllerWiFi().equals("off")){
                 CmdManager.cmdCommand(CmdCommands.WIFI_OFF.getCommand());
+                System.out.println("Wifi is off");
             } else {
                 System.out.println("Wifi is on");
             }
