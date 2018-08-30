@@ -10,7 +10,7 @@ import tools.cmd.enamCommand.CmdCommands;
 public class SettingsForTests {
     private static final Logger log = Logger.getLogger(SettingsForTests.class);
     public static SoftAssert softAssert;
-    private String cmdCommand = CmdCommands.REBOOT.getCommand();
+//    private String cmdCommand = CmdCommands.REBOOT.getCommand();
 
     AppiumServerJava appiumServerJava = new AppiumServerJava();
 
