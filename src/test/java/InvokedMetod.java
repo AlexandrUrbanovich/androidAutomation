@@ -17,9 +17,9 @@ public class InvokedMetod implements IInvokedMethodListener {
 
             if(pManager.controllerWiFi().equals("off")){
                 CmdManager.cmdCommand(CmdCommands.WIFI_OFF.getCommand());
-                System.out.println("Wifi is off");
+                System.out.println("WiFi is off");
             } else {
-                System.out.println("Wifi is on");
+                System.out.println("WiFi is on");
             }
         }else{
             System.out.println("Annotation not present");
