@@ -28,6 +28,8 @@ public class InvokedMetod implements IInvokedMethodListener {
 
     @Override
     public void afterInvocation(IInvokedMethod method, ITestResult testResult) {
-        System.out.println("afterInvocation is indefinite");
+        CmdManager.cmdCommand(CmdCommands.WIFI_ON.getCommand());
+        System.out.println("WiFi is on");
     }
+
 }
