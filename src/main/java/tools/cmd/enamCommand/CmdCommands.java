@@ -6,7 +6,7 @@ public enum CmdCommands {
     DEVICE("adb device"),
     SHELL("adb shell"),
     WIFI_ON("adb root && adb shell svc wifi enable"),
-    WIFI_OFF("adb root && adb shell svc wifi disable");
+    WIFI_OFF("adb root && adb -s emulator-5554 shell svc wifi disable");
 
     public String name;
 
