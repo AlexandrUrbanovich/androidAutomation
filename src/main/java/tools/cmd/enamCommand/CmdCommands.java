@@ -16,4 +16,13 @@ public enum CmdCommands {
 
     public String getCommand() {return name;}
 
+    public String getWiFiCommandOFF(String udid) {
+        return String.format("C:/Users/Aliaksandr_Urbanovic/AppData/Local/Android/Sdk/platform-tools/adb %s shell svc wifi disable", udid);
+    }
+
+    public String getWiFiCommandON(String udid) {
+        return String.format("C:/Users/Aliaksandr_Urbanovic/AppData/Local/Android/Sdk/platform-tools/adb %s shell svc wifi enable", udid);
+    }
+
+
 }
