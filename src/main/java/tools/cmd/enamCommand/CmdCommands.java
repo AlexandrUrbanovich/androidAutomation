@@ -6,23 +6,16 @@ public enum CmdCommands {
     DEVICE("adb device"),
     SHELL("adb shell"),
 //    WIFI_ON("adb root && adb shell svc wifi enable"),
-    WIFI_ON("C:/Users/Aliaksandr_Urbanovic/AppData/Local/Android/Sdk/platform-tools/adb shell svc wifi enable"),
+    WIFI_ON("C:/Users/Aliaksandr_Urbanovic/AppData/Local/Android/Sdk/platform-tools/adb -s %s shell svc wifi enable"),
 //    WIFI_OFF("adb root && adb shell svc wifi disable");
-    WIFI_OFF("C:/Users/Aliaksandr_Urbanovic/AppData/Local/Android/Sdk/platform-tools/adb shell svc wifi disable");
+    WIFI_OFF("C:/Users/Aliaksandr_Urbanovic/AppData/Local/Android/Sdk/platform-tools/adb -s %s shell svc wifi disable");
 
-    public String name;
+    public String value;
 
-    CmdCommands(String name) {this.name = name;}
+    CmdCommands(String value) {this.value = value;}
 
-    public String getCommand() {return name;}
-
-    public String getWiFiCommandOFF(String udid) {
-        return String.format("C:/Users/Aliaksandr_Urbanovic/AppData/Local/Android/Sdk/platform-tools/adb %s shell svc wifi disable", udid);
+    public String getCommand(String udid) {
+        return String.format(value, udid);
     }
-
-    public String getWiFiCommandON(String udid) {
-        return String.format("C:/Users/Aliaksandr_Urbanovic/AppData/Local/Android/Sdk/platform-tools/adb %s shell svc wifi enable", udid);
-    }
-
 
 }
